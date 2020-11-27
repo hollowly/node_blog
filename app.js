@@ -15,7 +15,7 @@ app.use('/node_modules/', express.static(path.join(__dirname, './node_modules/')
 //    {{}}
 //    h1
 //    div
-//      h1
+//    h1
 app.engine('html', require('express-art-template'))
 app.set('views', path.join(__dirname, './views/')) // 默认就是 ./views 目录
 
