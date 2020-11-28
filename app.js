@@ -45,6 +45,17 @@ app.use(session({
 // 把路由挂载到 app 中
 app.use(router)
 
+// 配置一个处理 404 的中间件
+app.use((req, res) => {
+	res.render('404.html')
+})
+
+// 配置错误处理中间件
+app.use((err, req, res, next) => {
+	console.log('app error handler');
+})
+
+
 app.listen(3000, function () {
   console.log('running...')
 })
